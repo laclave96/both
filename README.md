@@ -10,7 +10,7 @@ Both is an app to make friends, date and meet new people all over the world acco
 <img align="left" width="150" src="https://github.com/laclave96/both/blob/main/1675061501-Screenshot_20221010-204108_Both.jpg">
 <img align="left" width="150" src="https://github.com/laclave96/both/blob/main/1675061501-Screenshot_20221010-203712_Both.jpg">
 <img align="left" width="150" src="https://github.com/laclave96/both/blob/main/1675061501-Screenshot_20221010-203859_Both.jpg">
-<img align="left" width="150" src="https://github.com/laclave96/both/blob/main/1675061501-Screenshot_20221010-203918_Both.jpg">
+<img align="left" width="150" src="https://github.com/laclave96/both/blob/main/1675061501-Screenshot_20221010-203059_Both.jpg">
 <img align="left" width="150" src="https://github.com/laclave96/both/blob/main/1675061501-Screenshot_20221010-203117_Both.jpg">
 <img align="left" width="150" src="https://github.com/laclave96/both/blob/main/1675061501-Screenshot_20221010-203927_Both.jpg">
 <img align="left" width="150" src="https://github.com/laclave96/both/blob/main/1675061501-Screenshot_20221010-203911_Both.jpg">

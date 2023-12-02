@@ -1,0 +1,138 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Both" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/redPrimary</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary brand color. -->
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
+
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <item name="popupMenuStyle">@style/PopupMenu</item>
+        <item name="textAppearanceLargePopupMenu">@style/AppTheme.TextAppearance.Popup</item>
+    </style>
+
+    <style name="Notification" parent="Theme.MaterialComponents.DayNight">
+        <item name="colorPrimary">@color/redPrimary</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+
+    </style>
+
+    <style name="ThemeCrop" parent="Theme.MaterialComponents.Light.Bridge"   >
+
+
+        <item name="textAppearanceLargePopupMenu">@style/AppTheme.TextAppearance.Popup</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <item name="popupMenuStyle">@style/PopupMenu</item>
+        <item name="itemTextAppearance">@style/menuText</item>
+
+    </style>
+
+    <style name="CustomShowcaseTheme" parent="ShowcaseView.Light">
+        <item name="sv_backgroundColor">@color/white</item>
+        <item name="sv_showcaseColor">@color/redSecundary</item>
+        <item name="sv_buttonText">Entendido</item>
+        <item name="sv_buttonForegroundColor">@color/redSecundary</item>
+        <item name="sv_tintButtonColor">true</item>
+        <item name="sv_titleTextAppearance">@style/CustomTitle</item>
+    </style>
+
+
+
+    <style name="CustomTitle" parent="TextAppearance.ShowcaseView.Title">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:lineSpacingMultiplier">1.6</item>
+        <item name="android:fontFamily">@font/comforta_bold</item>
+    </style>
+
+    <style name="CustomTitle2" parent="TextAppearance.ShowcaseView.Title.Light">
+        <item name="android:textColor">#deffffff</item>
+    </style>
+
+    <style name="CustomText2" parent="TextAppearance.ShowcaseView.Detail.Light">
+        <item name="android:textColor">#8affffff</item>
+    </style>
+
+    <style name="ListItemBigtext">
+        <item name="android:textColor">#25467A</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="ListItemSubtext">
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/back_top_15dp</item>
+
+    </style>
+
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/comforta_bold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="chipFont" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/comforta_bold</item>
+    </style>
+
+    <style name="chipFontF" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/comforta_bold</item>
+    </style>
+
+    <style name="buttonScv" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/redSecundary</item>
+        <item name="android:fontFamily">@font/font_chips</item>
+    </style>
+
+    <style name="NumberPickerStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:colorControlNormal" tools:targetApi="lollipop">@color/black</item>
+    </style>
+
+    <style name="PickerTheme" >
+        <item name="android:editTextStyle">@style/PickerEditText</item>
+    </style>
+
+    <style name="PickerEditText">
+        <item name="android:textSize">19sp</item>
+        <item name="android:fontFamily">@font/comforta_bold</item>
+    </style>
+
+    <style name="PopupMenu" parent="@android:style/Widget.PopupMenu">
+        <item name="android:popupBackground">@drawable/back_15dp</item>
+        <item name="android:popupElevation">2dp</item>
+        <item name="textColor">@color/black</item>
+    </style>
+    <style name="menuText" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/font_chips</item>
+    </style>
+
+    <style name="AppTheme.TextAppearance.Popup" parent="menuText">
+        <item name="fontFamily">@font/comforta_bold</item>
+        <item name="textSize">18sp</item>
+
+    </style>
+    
+</resources>

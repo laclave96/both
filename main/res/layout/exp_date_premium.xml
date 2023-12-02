@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/drawable"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/exp_date_premium"
+        app:civ_border="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_margin="10dp"
+        android:padding="3dp"
+        android:src="@drawable/ic_round_close_24"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/grayDark" />
+    <TextView
+        android:id="@+id/tagsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:fontFamily="@font/comforta_bold"
+        android:text="No te quedan citas..."
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/drawable" />
+
+
+    <TextView
+        android:id="@+id/exp1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/comforta_bold"
+        android:lineSpacingMultiplier="1.3"
+        android:text="Has utilizado todas las citas del día de hoy, pásate a premium para obtener más."
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tagsTitle" />
+
+
+    <TextView
+        android:id="@+id/goPrem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="35sp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/golden_stroke"
+        android:fontFamily="@font/comforta_bold"
+        android:paddingStart="25dp"
+        android:paddingTop="9dp"
+        android:paddingEnd="25dp"
+        android:paddingBottom="11dp"
+
+        android:text="Both Premium"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/golden"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/exp1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/drawable"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/error_pay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tagsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/comforta_bold"
+        android:lineSpacingMultiplier="1.25"
+        android:text="Pago erroneo"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/drawable" />
+
+
+    <TextView
+        android:id="@+id/exp1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/comforta_bold"
+        android:lineSpacingMultiplier="1.30"
+        android:text="Ha ocurrido algún problema con tu pago. Por favor, intentalo nuevamente en unos minutos"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tagsTitle" />
+
+
+    <TextView
+        android:id="@+id/goPrem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30sp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/gradient_button"
+        android:fontFamily="@font/comforta_bold"
+        android:paddingStart="20dp"
+        android:paddingTop="9dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="11dp"
+        android:text="Entedido"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/exp1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

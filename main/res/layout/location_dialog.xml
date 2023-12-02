@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/drawable"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/ic_loc"
+        app:lottie_speed="0.85" />
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="11dp"
+        android:padding="2dp"
+        android:src="@drawable/ic_round_close_24"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/grayDark" />
+
+    <TextView
+        android:id="@+id/tagsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/comforta_bold"
+        android:lineSpacingMultiplier="1.25"
+        android:text="Localizando"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/drawable" />
+
+
+    <TextView
+        android:id="@+id/exp1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/comforta_bold"
+        android:lineSpacingMultiplier="1.28"
+        android:text="Es necesario que concedas los permisos de localización para poder disfrutar de la plataforma"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tagsTitle" />
+
+    <TextView
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40sp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/gradient_button"
+        android:fontFamily="@font/comforta_bold"
+        android:paddingStart="20dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        android:text="Conceder"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/exp1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

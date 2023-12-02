@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/drawable"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="11dp"
+        android:padding="2dp"
+        android:src="@drawable/ic_round_close_24"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/grayDark" />
+
+    <TextView
+        android:id="@+id/tagsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/comforta_bold"
+        android:lineSpacingMultiplier="1.25"
+        android:text="Procesando pago..."
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/drawable" />
+
+
+    <TextView
+        android:id="@+id/exp1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/comforta_bold"
+        android:lineSpacingMultiplier="1.28"
+        android:text="Estamos procesando un pago pendiente. Por favor, espera a que termine el proceso."
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tagsTitle" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

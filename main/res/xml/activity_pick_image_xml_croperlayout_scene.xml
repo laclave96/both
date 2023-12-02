@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/view169"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1">
+       <KeyFrameSet>
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/view169">
+
+        <Constraint
+            android:id="@+id/instacropper"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:translationZ="-1dp"
+            android:background="@color/red"
+            motion:layout_constraintBottom_toBottomOf="@id/guide1"
+            motion:layout_constraintLeft_toLeftOf="@id/guide1"
+            motion:layout_constraintRight_toRightOf="@id/guide1"
+            motion:layout_constraintTop_toTopOf="@id/guide1" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/view916" >
+
+
+        <Constraint
+            android:id="@+id/instacropper"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:translationZ="-1dp"
+            android:background="@color/red"
+            motion:layout_constraintBottom_toBottomOf="@id/guide2"
+            motion:layout_constraintLeft_toLeftOf="@id/guide2"
+            motion:layout_constraintRight_toRightOf="@id/guide2"
+            motion:layout_constraintTop_toTopOf="@id/guide2" />
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/view916"
+        motion:duration="1"/>
+    <Transition
+        motion:constraintSetStart="@+id/view169"
+        motion:constraintSetEnd="@+id/view916"
+        motion:duration="1"/>
+    <Transition
+        motion:constraintSetStart="@+id/view916"
+        motion:constraintSetEnd="@+id/view169"
+        motion:duration="1"/>
+    <Transition
+        motion:constraintSetStart="@+id/view916"
+        motion:constraintSetEnd="@+id/start"
+        motion:duration="1"/>
+    <Transition
+        motion:constraintSetStart="@+id/view169"
+        motion:constraintSetEnd="@+id/start"
+        motion:duration="1"/>
+
+</MotionScene>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/nameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/comforta_bold"
+        android:text="¿A qué te dedicas?"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/comforta_bold"
+        android:text="@string/save"
+        android:textColor="@color/redSecundary"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@id/nameTitle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/nameTitle" />
+
+
+    <TextView
+        android:id="@+id/studyButt"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/back_15dp_stroke"
+        android:fontFamily="@font/comforta_bold"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="Estudio"
+        android:textAlignment="gravity"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/workButt"
+        app:layout_constraintTop_toBottomOf="@id/nameTitle" />
+
+
+    <View
+        android:id="@+id/studyView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/back_15dp_red_gradient"
+        android:translationZ="-1dp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="@id/studyButt"
+        app:layout_constraintBottom_toBottomOf="@id/studyButt"
+        app:layout_constraintRight_toRightOf="@id/studyButt"
+        app:layout_constraintTop_toTopOf="@id/studyButt" />
+
+    <TextView
+        android:id="@+id/workButt"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/back_15dp_stroke"
+        android:fontFamily="@font/comforta_bold"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="Trabajo"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toRightOf="@id/studyButt"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameTitle" />
+
+    <View
+        android:id="@+id/workView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/back_15dp_red_gradient"
+        android:translationZ="-1dp"
+        android:visibility="invisible"
+        app:layout_constraintRight_toRightOf="@id/workButt"
+        app:layout_constraintBottom_toBottomOf="@id/workButt"
+        app:layout_constraintLeft_toLeftOf="@id/workButt"
+        app:layout_constraintTop_toTopOf="@id/workButt"
+
+        />
+
+    <EditText
+        android:id="@+id/editPlace"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/back_15dp"
+        android:backgroundTint="@color/graySSLite"
+        android:fontFamily="@font/comforta_bold"
+        android:hint="Lugar"
+        android:inputType="textCapWords"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/editPlace"
+        app:layout_constraintTop_toBottomOf="@id/studyButt" />
+
+    <EditText
+        android:id="@+id/editOcup"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/back_15dp"
+        android:backgroundTint="@color/graySSLite"
+        android:fontFamily="@font/comforta_bold"
+        android:hint="Ocupación"
+        android:inputType="textCapWords"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/editPlace"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

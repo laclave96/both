@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/baseLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="7dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/gradient"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/mainImage"
+        app:layout_constraintLeft_toLeftOf="@id/mainImage"
+        app:layout_constraintRight_toRightOf="@id/mainImage"
+        app:layout_constraintTop_toTopOf="@id/textName"
+        app:riv_corner_radius_bottom_left="10dp"
+        app:riv_corner_radius_bottom_right="10dp"
+
+        />
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/mainImage"
+        app:actualImageScaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:placeholderImage="@color/dBackground"
+        app:progressBarImage="@drawable/ic_loading"
+        app:progressBarAutoRotateInterval="900"
+        app:roundedCornerRadius="10dp" />
+
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/mainImage"
+        app:layout_constraintLeft_toLeftOf="@id/mainImage" />
+
+
+    <ImageView
+        android:id="@+id/heartIc"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="11dp"
+        android:src="@drawable/ic_icon_heart"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/mainImage"
+        app:layout_constraintRight_toLeftOf="@id/cantLikes"
+        />
+
+    <TextView
+        android:id="@+id/cantLikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/mainImage"
+        app:layout_constraintRight_toRightOf="@id/mainImage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

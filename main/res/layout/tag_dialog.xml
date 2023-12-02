@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/baseL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tagsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/comforta_bold"
+        android:text="Intereses"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/comforta_bold"
+        android:text="Guardar"
+        android:textColor="@color/redSecundary"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@id/tagsTitle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tagsTitle" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="15dp"
+        android:translationZ="-2dp"
+        app:layout_constraintBottom_toTopOf="@id/edit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tagsTitle">
+
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/tags"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipGuide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/comforta_bold"
+                android:text="Jazz"
+                android:textAppearance="@style/chipFontF"
+                android:visibility="gone"
+                app:chipBackgroundColor="@color/white"
+                app:chipStrokeWidth="1.8dp"
+                app:closeIconEnabled="false" />
+
+
+        </com.google.android.material.chip.ChipGroup>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/comforta_bold"
+        android:text="#"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/edit"
+        app:layout_constraintLeft_toLeftOf="@id/edit"
+        app:layout_constraintTop_toTopOf="@id/edit" />
+
+
+    <ImageView
+        android:id="@+id/addButton"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="10dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:src="@drawable/ic_add"
+        android:translationZ="1dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/edit"
+        app:layout_constraintRight_toRightOf="@id/edit"
+        app:layout_constraintTop_toTopOf="@id/edit"
+        app:tint="@color/redSecundary" />
+
+    <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/back_15dp"
+        android:backgroundTint="@color/graySSLite"
+        android:fontFamily="@font/comforta_bold"
+        android:hint="Añade nueva + 🙂"
+        android:inputType="textCapSentences"
+        android:paddingStart="36dp"
+        android:paddingBottom="1dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

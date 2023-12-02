@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/outMmsBase"
+    android:background="@drawable/msg_transition"
+    android:layout_width="match_parent"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dayTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/comforta_bold"
+        android:textAlignment="center"
+        android:textSize="13sp"
+        android:visibility="gone"
+        android:layout_marginBottom="10dp"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll"
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/back_20dp"
+        android:backgroundTint="@color/dodger_blue"
+        android:orientation="vertical"
+     >
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/bodyReply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/back_15dp"
+            android:backgroundTint="@color/dBackground_transp"
+            android:fontFamily="@font/comforta_bold"
+            android:lineSpacingMultiplier="1.1"
+            android:maxLines="2"
+            android:paddingStart="10dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="4dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            app:lottie_colorFilter="@color/white"
+            android:padding="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bodyReply"
+            app:lottie_rawRes="@raw/play_pause"
+            app:lottie_speed="1.5" />
+
+        <com.masoudss.lib.WaveformSeekBar
+            android:id="@+id/waveformSeekBar"
+            android:layout_width="140dp"
+            android:layout_marginStart="1dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/button"
+            app:layout_constraintRight_toLeftOf="@id/duration"
+            app:layout_constraintTop_toBottomOf="@id/bodyReply"
+            app:wave_background_color="@color/dBackground_transp_50"
+            app:wave_corner_radius="5dp"
+            app:wave_gap="2dp"
+            app:wave_gravity="center"
+            app:wave_max_progress="0.98"
+            app:wave_min_height="5dp"
+            app:wave_progress="0"
+            app:wave_progress_color="@color/white"
+            app:wave_width="2dp" />
+
+
+        <TextView
+            android:textAlignment="center"
+            android:id="@+id/duration"
+            android:textColor="@color/white"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/comforta_bold"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/waveformSeekBar"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bodyReply" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_marginTop="3dp"
+        android:id="@+id/timell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="10dp">
+
+        <TextView
+            android:id="@+id/dateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="3dp"
+            android:fontFamily="@font/comforta_bold"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/status"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/ic_round_done_all_24" />
+
+
+    </LinearLayout>
+</LinearLayout>

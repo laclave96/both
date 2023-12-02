@@ -1,0 +1,542 @@
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/checkMotionBase"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layoutDescription="@xml/activity_checkout_scene"
+    tools:context=".CheckoutActivity">
+
+
+    <ScrollView
+        android:id="@+id/srollViewInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/paymentInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:translationZ="3dp"
+                app:hideAnimationBehavior="inward"
+                app:indicatorColor="@color/Blue"
+                app:indicatorSize="60dp"
+                app:layout_constraintBottom_toBottomOf="@id/toPayTv"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:showAnimationBehavior="outward"
+                app:trackCornerRadius="10dp"
+                app:trackThickness="4dp" />
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:paddingStart="4dp"
+                android:paddingBottom="4dp"
+                android:src="@drawable/ic_round_close_24"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/grayDark" />
+
+            <ImageView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginEnd="100dp"
+                android:fontFamily="@font/comforta_bold"
+                android:src="@drawable/both_premium"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="21sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/sucription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Plan de 6 meses"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+
+            <View
+                android:id="@+id/sep0"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="13dp"
+                android:background="@color/graySALite"
+                app:layout_constraintTop_toBottomOf="@id/sucription" />
+
+            <TextView
+                android:id="@+id/aPartir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/comforta_bold"
+                android:text="@string/desde_hoy_hasta"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sep0" />
+
+
+            <TextView
+                android:id="@+id/startDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/comforta_bold"
+                android:text="15 julio 2022"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/aPartir" />
+
+
+            <TextView
+                android:id="@+id/payMonthly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:paddingBottom="2dp"
+                android:text="5.99€/mes"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="@id/sep1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/sep0" />
+
+            <View
+                android:id="@+id/sep1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="14dp"
+                android:background="@color/graySALite"
+                app:layout_constraintTop_toBottomOf="@id/startDate" />
+
+            <TextView
+                android:id="@+id/planDetailsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Detalles del plan"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sep1" />
+
+            <TextView
+                android:id="@+id/planDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/comforta_bold"
+                android:lineSpacingMultiplier="1.3"
+                android:text="@string/detalles_plan_spec"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/planDetailsTv" />
+
+            <TextView
+                android:id="@+id/politicsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/politica_de_cancelacion"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/planDetails" />
+
+            <TextView
+                android:id="@+id/politics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/comforta_bold"
+                android:lineSpacingMultiplier="1.3"
+                android:text="@string/politica_detalles"
+                android:textSize="16sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/politicsTv" />
+
+
+            <View
+                android:id="@+id/sep2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/graySALite"
+                app:layout_constraintTop_toBottomOf="@id/politics" />
+
+            <TextView
+                android:id="@+id/totalTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/comforta_bold"
+                android:text="Total"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sep2" />
+
+            <TextView
+                android:id="@+id/toPayTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/comforta_bold"
+                android:text="@string/a_pagar_hoy"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/totalTv" />
+
+            <TextView
+                android:id="@+id/toPay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="35,94€"
+                android:textColor="@color/black"
+                android:textSize="21sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/totalTv" />
+
+            <TextView
+                android:id="@+id/taxes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/iva_incluido"
+                android:textSize="13sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toPay" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/taxes" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/srollViewPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/insertPay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="250dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/transparent"
+                android:padding="4dp"
+                android:src="@drawable/ic_back"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:id="@+id/drawable"
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginBottom="30dp"
+                android:src="@drawable/add_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleAddCard" />
+
+            <TextView
+                android:id="@+id/titleAddCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:fontFamily="@font/comforta_bold"
+                android:text="@string/añade_una_tarjeta"
+                android:textColor="@color/black"
+                android:textSize="21sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/back_15dp"
+                android:backgroundTint="@color/dBackground"
+                app:layout_constraintBottom_toBottomOf="@id/cardInputWidget"
+                app:layout_constraintLeft_toLeftOf="@id/cardInputWidget"
+                app:layout_constraintRight_toRightOf="@id/cardInputWidget"
+                app:layout_constraintTop_toTopOf="@id/cardInputWidget" />
+
+            <View
+
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/back_15dp"
+                android:backgroundTint="@color/dBackground"
+                app:layout_constraintBottom_toBottomOf="@id/nameEt"
+                app:layout_constraintLeft_toLeftOf="@id/nameEt"
+                app:layout_constraintRight_toRightOf="@id/nameEt"
+                app:layout_constraintTop_toTopOf="@id/nameEt" />
+
+
+            <View
+
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/back_15dp"
+                android:backgroundTint="@color/dBackground"
+                app:layout_constraintBottom_toBottomOf="@id/validEt"
+                app:layout_constraintLeft_toLeftOf="@id/validEt"
+                app:layout_constraintRight_toRightOf="@id/validEt"
+                app:layout_constraintTop_toTopOf="@id/validEt" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/back_15dp"
+                android:backgroundTint="@color/dBackground"
+                app:layout_constraintBottom_toBottomOf="@id/cvcEt"
+                app:layout_constraintLeft_toLeftOf="@id/cvcEt"
+                app:layout_constraintRight_toRightOf="@id/cvcEt"
+                app:layout_constraintTop_toTopOf="@id/cvcEt" />
+
+            <com.stripe.android.view.CardNumberEditText
+                android:id="@+id/cardInputWidget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:backgroundTint="@color/transparent"
+                android:fontFamily="@font/comforta_bold"
+                android:hint="@string/numero"
+                android:paddingStart="15dp"
+                android:paddingEnd="55dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_115"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/drawable" />
+
+            <ImageView
+                android:id="@+id/basicCard"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_card_golden"
+                android:tint="@color/grayMLite"
+                app:layout_constraintBottom_toBottomOf="@id/cardInputWidget"
+                app:layout_constraintRight_toRightOf="@id/cardInputWidget"
+                app:layout_constraintTop_toTopOf="@id/cardInputWidget" />
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_calendar"
+                android:tint="@color/grayMLite"
+                app:layout_constraintBottom_toBottomOf="@id/validEt"
+                app:layout_constraintRight_toRightOf="@id/validEt"
+                app:layout_constraintTop_toTopOf="@id/validEt" />
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_lock"
+                android:tint="@color/grayMLite"
+                app:layout_constraintBottom_toBottomOf="@id/cvcEt"
+                app:layout_constraintRight_toRightOf="@id/cvcEt"
+                app:layout_constraintTop_toTopOf="@id/cvcEt" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_name"
+                android:tint="@color/grayMLite"
+                app:layout_constraintBottom_toBottomOf="@id/nameEt"
+                app:layout_constraintRight_toRightOf="@id/nameEt"
+                app:layout_constraintTop_toTopOf="@id/nameEt" />
+
+            <com.stripe.android.view.CardBrandView
+                android:id="@+id/brand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="13dp"
+                app:layout_constraintBottom_toBottomOf="@id/cardInputWidget"
+                app:layout_constraintRight_toRightOf="@id/cardInputWidget"
+                app:layout_constraintTop_toTopOf="@id/cardInputWidget" />
+
+
+            <com.stripe.android.view.ExpiryDateEditText
+                android:id="@+id/validEt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/transparent"
+                android:fontFamily="@font/comforta_bold"
+                android:hint="@string/fecha"
+                android:paddingStart="15dp"
+                android:paddingEnd="45dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_115"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/cvcEt"
+                app:layout_constraintTop_toBottomOf="@id/cardInputWidget" />
+
+
+            <com.stripe.android.view.StripeEditText
+                android:id="@+id/nameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:backgroundTint="@color/transparent"
+                android:fontFamily="@font/comforta_bold"
+                android:hint="@string/nombre_completo"
+                android:inputType="textCapWords"
+                android:paddingStart="15dp"
+                android:paddingEnd="45dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_115"
+                app:layout_constraintTop_toBottomOf="@id/validEt" />
+
+            <com.stripe.android.view.CvcEditText
+                android:id="@+id/cvcEt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="22dp"
+                android:backgroundTint="@color/transparent"
+                android:fontFamily="@font/comforta_bold"
+                android:paddingStart="15dp"
+                android:paddingEnd="45dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_115"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toRightOf="@id/validEt"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardInputWidget" />
+
+
+            <TextView
+                android:id="@+id/conditions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/comforta_bold"
+                android:lineSpacingMultiplier="1.1"
+                android:text="@string/condiciones"
+                android:textAlignment="center"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nameEt" />
+
+            <ImageView
+                android:id="@+id/power"
+                android:layout_width="135dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/powered"
+                android:tint="@color/gray_200"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/conditions" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/power" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/nextStep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/golden_buton"
+        android:fontFamily="@font/comforta_bold"
+        android:paddingStart="30dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="7dp"
+        android:text="@string/continuar"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/payWithCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/gradient_button"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingStart="30dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="8dp"
+        android:text="Pagar 35,94€"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

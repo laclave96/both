@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dBackground"
+    tools:context=".InfoProfileFragment">
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@color/transparent"
+            android:padding="4dp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/redSecundary" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/comforta_bold"
+            android:paddingBottom="2dp"
+            android:text="Completa tu perfil"
+            android:textColor="@color/redSecundary"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/ic_alert"
+            android:id="@+id/ic_info"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="13dp"
+            android:layout_toRightOf="@id/title"
+            android:layout_alignBottom="@id/title" />
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <include
+                android:id="@+id/image1"
+                layout="@layout/profile_image"
+                android:layout_width="0dp"
+                android:layout_height="220dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/image2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <include
+                android:id="@+id/image2"
+                layout="@layout/profile_image"
+                android:layout_width="0dp"
+                android:layout_height="220dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintLeft_toRightOf="@id/image1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@+id/image3"
+                layout="@layout/profile_image"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/image4"
+                app:layout_constraintTop_toBottomOf="@id/image1" />
+
+            <include
+                android:id="@+id/image4"
+                layout="@layout/profile_image"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintLeft_toRightOf="@id/image3"
+                app:layout_constraintRight_toLeftOf="@id/image5"
+                app:layout_constraintTop_toBottomOf="@id/image1" />
+
+            <include
+                android:id="@+id/image5"
+                layout="@layout/profile_image"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintLeft_toRightOf="@id/image4"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image1" />
+
+
+            <RelativeLayout
+                android:id="@+id/nameInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/back_15dp"
+                android:backgroundTint="@color/cardview_light_background"
+                android:padding="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image3">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comforta_bold"
+                        android:singleLine="true"
+                        android:text="@string/name_age"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comforta_bold"
+                        android:singleLine="true"
+                        android:text="@string/donde_vives"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/warningInfo"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/ic_alert" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/orientation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/back_15dp"
+                android:backgroundTint="@color/cardview_light_background"
+                android:padding="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gender">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comforta_bold"
+                        android:text="@string/orientacion_sex"
+                        android:textColor="@color/black"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:id="@+id/textOrientation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comforta_bold"
+                        android:text="@string/que_te_atrae"
+                        android:textColor="@color/redSecundary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/back_15dp"
+                android:backgroundTint="@color/cardview_light_background"
+                android:padding="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nameInfo">
+
+                <ImageView
+                    android:id="@+id/warningGender"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/ic_alert"
+                     />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comforta_bold"
+                        android:text="@string/genero"
+                        android:textColor="@color/black"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:id="@+id/textGender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comforta_bold"
+                        android:text="@string/como_te_identificas"
+                        android:textColor="@color/redSecundary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/preferences"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/back_15dp"
+                android:backgroundTint="@color/cardview_light_background"
+                android:padding="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/orientation">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/titleEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comforta_bold"
+                        android:text="@string/intereses"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/tags"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/titleEdit">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipGuide"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comforta_bold"
+                            android:text="@string/añade_alguno"
+                            android:textAppearance="@style/chipFontF"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:visibility="visible"
+                            app:chipBackgroundColor="@color/white"
+                            app:chipStrokeWidth="1dp" />
+
+
+                    </com.google.android.material.chip.ChipGroup>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/occupation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/back_15dp"
+                android:backgroundTint="@color/cardview_light_background"
+                android:padding="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/preferences">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/titleOccupation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comforta_bold"
+                        android:text="@string/a_que_dedicas"
+                        android:textColor="@color/black"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:id="@+id/textOccupation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:fontFamily="@font/comforta_bold"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="@string/estudio_trabajo"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/zodiac"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/back_15dp"
+                android:backgroundTint="@color/cardview_light_background"
+                android:padding="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/occupation">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comforta_bold"
+                        android:text="@string/signo_zodiacal"
+                        android:textColor="@color/black"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:id="@+id/textZodiac"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleEdit"
+                        android:fontFamily="@font/comforta_bold"
+                        android:text="@string/signos"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aboutMe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/back_15dp"
+                android:backgroundTint="@color/cardview_light_background"
+                android:padding="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/zodiac">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/titleAboutMe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comforta_bold"
+                        android:text="@string/sobre_mi"
+                        android:textColor="@color/black"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:id="@+id/textAboutMe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comforta_bold"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="@string/describete"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/survey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/back_15dp"
+                android:backgroundTint="@color/cardview_light_background"
+                android:padding="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/aboutMe">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/surveyTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comforta_bold"
+                            android:text="@string/encuesta"
+                            android:textColor="@color/black"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:id="@+id/cantAnswers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="13dp"
+                            android:layout_marginTop="-3dp"
+                            android:background="@drawable/gradient_button"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:paddingBottom="2dp"
+                            android:text="@string/sin_responder"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comforta_bold"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="@string/respondeme"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/instagram"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/back_15dp"
+                android:backgroundTint="@color/cardview_light_background"
+                android:padding="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/survey">
+
+
+                <LinearLayout
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comforta_bold"
+                        android:text="@string/redes_sociales"
+                        android:textColor="@color/black"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:id="@+id/textInsta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comforta_bold"
+                        android:text="@string/add_instagram"
+                        android:textColor="@color/redSecundary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/insta" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/back_15dp"
+                android:backgroundTint="@color/cardview_light_background"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/instagram">
+
+                <ImageView
+                    android:id="@+id/warningEmail"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/ic_alert"
+                     />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comforta_bold"
+                        android:text="@string/Correo"
+                        android:textColor="@color/black"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:id="@+id/textEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="55dp"
+                        android:fontFamily="@font/comforta_bold"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="@string/necesitas_un_correo"
+                        android:textColor="@color/redSecundary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

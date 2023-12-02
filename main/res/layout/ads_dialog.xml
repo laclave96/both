@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/nameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/comforta_bold"
+        android:text="Anuncios"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_margin="10dp"
+        android:padding="3dp"
+        android:src="@drawable/ic_round_close_24"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/grayDark" />
+
+    <TextView
+        android:id="@+id/exp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/comforta_bold"
+        android:lineSpacingMultiplier="1.30"
+        android:text="Los anuncios con contenido explícito están desactivados por defecto, si lo desea puede activarlos."
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/nameTitle" />
+
+
+
+    <com.animsh.animatedcheckbox.AnimatedCheckBox
+        android:id="@+id/check1"
+        app:color_checked="@color/redSecundary"
+        app:small_tick="true"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/exp" />
+
+    <TextView
+        android:id="@+id/activeAds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="35dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/comforta_bold"
+        android:text="Mostrar anuncios explícitos"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/check1"
+        app:layout_constraintLeft_toLeftOf="@id/check1"
+        app:layout_constraintTop_toTopOf="@id/check1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

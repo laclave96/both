@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/outMmsBase"
+    android:background="@drawable/msg_transition"
+    android:layout_width="match_parent"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/dayTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/comforta_bold"
+        android:textAlignment="center"
+        android:textSize="13sp"
+        android:visibility="gone"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout
+        android:layout_gravity="end"
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="9dp"
+        android:background="@drawable/back_20dp"
+        android:backgroundTint="@color/dodger_blue"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/bodyReply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/back_15dp"
+            android:backgroundTint="@color/dBackground_transp"
+            android:fontFamily="@font/comforta_bold"
+            android:lineSpacingMultiplier="1.1"
+            android:maxLines="2"
+            android:paddingStart="10dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="4dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/comforta_bold"
+            android:lineSpacingMultiplier="1.15"
+            android:paddingBottom="2dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:autoLink="all"
+            android:textColorLink="@color/BlueG"
+            android:linksClickable="true"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/timell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/dateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:fontFamily="@font/comforta_bold"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/status"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/ic_round_done_all_24" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

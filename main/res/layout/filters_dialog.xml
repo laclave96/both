@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/comforta_bold"
+        android:text="Filtros"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/comforta_bold"
+        android:text="Aplicar"
+        android:textColor="@color/redSecundary"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/title"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:translationZ="-2dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ajustesBusqueda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/mostrarme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/comforta_bold"
+                android:text="Me interesan"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.addisonelliott.segmentedbutton.SegmentedButtonGroup
+                android:id="@+id/buttonGroup"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/graySSSLite"
+                app:layout_constraintTop_toBottomOf="@id/mostrarme"
+                app:position="2"
+                app:radius="30dp"
+                app:selectedBackground="@drawable/gradient_button"
+                app:selectedBorderColor="@color/graySSSLite"
+                app:selectedBorderWidth="2dp"
+                app:selectedButtonRadius="30dp"
+                app:selectionAnimationDuration="400">
+
+                <com.addisonelliott.segmentedbutton.SegmentedButton
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/comforta_bold"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp"
+                    android:textAlignment="center"
+                    app:selectedTextColor="@color/white"
+                    app:text="Mujeres"
+                    app:textColor="@color/black"
+                    app:textSize="16sp" />
+
+                <com.addisonelliott.segmentedbutton.SegmentedButton
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/comforta_bold"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp"
+                    android:textAlignment="center"
+                    app:selectedTextColor="@color/white"
+                    app:text="Hombres"
+                    app:textColor="@color/black"
+                    app:textSize="16sp" />
+
+                <com.addisonelliott.segmentedbutton.SegmentedButton
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/comforta_bold"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp"
+                    android:textAlignment="center"
+                    app:selectedTextColor="@color/white"
+                    app:text="Ambos"
+                    app:textColor="@color/black"
+                    app:textSize="16sp" />
+
+            </com.addisonelliott.segmentedbutton.SegmentedButtonGroup>
+
+            <TextView
+                android:id="@+id/ooo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/comforta_bold"
+                android:text="Edades"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/buttonGroup" />
+
+
+            <TextView
+                android:id="@+id/ages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/comforta_bold"
+                android:text="18 - 30 años"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/buttonGroup" />
+
+            <com.jem.rubberpicker.RubberRangePicker
+                android:id="@+id/rangeAgePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                app:dampingRatio="0.3"
+                app:defaultThumbRadius="14dp"
+                app:elasticBehavior="cubic"
+                app:highlightDefaultThumbOnTouchColor="@color/redSecundary"
+                app:highlightTrackColor="@color/redSecundary"
+                app:highlightTrackWidth="2dp"
+                app:initialEndValue="40"
+                app:initialStartValue="18"
+                app:layout_constraintTop_toBottomOf="@id/ages"
+                app:maxValue="100"
+                app:minValue="18"
+                app:normalTrackColor="@color/grayLite"
+                app:stiffness="400"
+                app:stretchRange="50dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/comforta_bold"
+                android:text="Distancia"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rangeAgePicker" />
+
+            <TextView
+                android:id="@+id/dist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/comforta_bold"
+                android:text="Todo el mundo"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rangeAgePicker" />
+
+            <com.jem.rubberpicker.RubberSeekBar
+                android:id="@+id/distancePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="30dp"
+                app:dampingRatio="0.3"
+                app:defaultThumbRadius="14dp"
+                app:elasticBehavior="cubic"
+                app:highlightDefaultThumbOnTouchColor="@color/redSecundary"
+                app:highlightTrackColor="@color/redSecundary"
+                app:highlightTrackWidth="2dp"
+                app:initialValue="1300"
+                app:layout_constraintTop_toBottomOf="@id/dist"
+                app:maxValue="1000"
+                app:minValue="5"
+                app:normalTrackColor="@color/grayLite"
+                app:stiffness="400"
+                app:stretchRange="50dp" />
+
+            <View
+                android:id="@+id/horizontalMark"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="0.5dp"
+                android:background="@color/grayLite"
+                android:translationZ="-1dp"
+                app:layout_constraintBottom_toBottomOf="@id/distancePicker"
+                app:layout_constraintTop_toTopOf="@id/distancePicker" />
+
+
+            <ImageView
+                android:id="@+id/mRegMark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="10dp"
+                android:src="@drawable/red_circle_24dp"
+                android:translationZ="-1dp"
+                app:layout_constraintBottom_toBottomOf="@id/horizontalMark"
+                app:layout_constraintHorizontal_bias="0.75"
+                app:layout_constraintLeft_toLeftOf="@id/distancePicker"
+                app:layout_constraintRight_toRightOf="@id/distancePicker"
+                app:layout_constraintTop_toTopOf="@id/horizontalMark" />
+
+            <ImageView
+                android:id="@+id/countryMark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="10dp"
+                android:src="@drawable/red_circle_24dp"
+                android:translationZ="-1dp"
+                app:layout_constraintBottom_toBottomOf="@id/horizontalMark"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintLeft_toLeftOf="@id/distancePicker"
+                app:layout_constraintRight_toRightOf="@id/distancePicker"
+                app:layout_constraintTop_toTopOf="@id/horizontalMark" />
+
+
+            <ImageView
+                android:id="@+id/worldMark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="10dp"
+                android:src="@drawable/red_circle_24dp"
+                android:translationZ="-1dp"
+                app:layout_constraintBottom_toBottomOf="@id/horizontalMark"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintLeft_toLeftOf="@id/distancePicker"
+                app:layout_constraintRight_toRightOf="@id/distancePicker"
+                app:layout_constraintTop_toTopOf="@id/horizontalMark" />
+
+
+            <TextView
+                android:id="@+id/premiumF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/comforta_bold"
+                android:text="Regiones"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/distancePicker" />
+
+            <ImageView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/filter_map_840"
+                app:layout_constraintDimensionRatio="1.875:1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/premiumF" />
+
+            <View
+                android:id="@+id/NAX0"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintHorizontal_bias="0.329"
+                app:layout_constraintLeft_toLeftOf="@id/map"
+                app:layout_constraintRight_toRightOf="@id/map"
+                app:layout_constraintTop_toTopOf="@id/map" />
+
+            <View
+                android:id="@+id/NAY0"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/map"
+                app:layout_constraintLeft_toLeftOf="@id/map"
+                app:layout_constraintTop_toTopOf="@id/map"
+                app:layout_constraintVertical_bias="0.47" />
+
+            <View
+                android:id="@+id/LAY0"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/map"
+                app:layout_constraintLeft_toLeftOf="@id/map"
+                app:layout_constraintTop_toTopOf="@id/map"
+                app:layout_constraintVertical_bias="0.415" />
+
+            <View
+                android:id="@+id/LAX0"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/map"
+                app:layout_constraintHorizontal_bias="0.15"
+                app:layout_constraintLeft_toLeftOf="@id/map"
+                app:layout_constraintRight_toRightOf="@id/map" />
+
+            <View
+                android:id="@+id/LAX1"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/map"
+                app:layout_constraintHorizontal_bias="0.39"
+                app:layout_constraintLeft_toLeftOf="@id/map"
+                app:layout_constraintRight_toRightOf="@id/map" />
+
+            <View
+                android:id="@+id/EUX0"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintHorizontal_bias="0.248"
+                app:layout_constraintLeft_toLeftOf="@id/map"
+                app:layout_constraintRight_toRightOf="@id/map"
+                app:layout_constraintTop_toTopOf="@id/map" />
+
+            <View
+                android:id="@+id/EUX1"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintHorizontal_bias="0.65"
+                app:layout_constraintLeft_toLeftOf="@id/map"
+                app:layout_constraintRight_toRightOf="@id/map"
+                app:layout_constraintTop_toTopOf="@id/map" />
+
+            <View
+                android:id="@+id/EUY0"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/map"
+                app:layout_constraintLeft_toLeftOf="@id/map"
+                app:layout_constraintTop_toTopOf="@id/map"
+                app:layout_constraintVertical_bias="0.42" />
+
+            <View
+                android:id="@+id/ASX0"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintHorizontal_bias="0.54"
+                app:layout_constraintLeft_toLeftOf="@id/map"
+                app:layout_constraintRight_toRightOf="@id/map"
+                app:layout_constraintTop_toTopOf="@id/map" />
+
+            <View
+                android:id="@+id/ASY0"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/map"
+                app:layout_constraintRight_toRightOf="@id/map"
+                app:layout_constraintTop_toTopOf="@id/map"
+                app:layout_constraintVertical_bias="0.71" />
+
+            <View
+                android:id="@+id/AFY0"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/map"
+                app:layout_constraintLeft_toLeftOf="@id/map"
+                app:layout_constraintTop_toTopOf="@id/map"
+                app:layout_constraintVertical_bias="0.385" />
+
+            <View
+                android:id="@+id/AFY1"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/map"
+                app:layout_constraintLeft_toLeftOf="@id/map"
+                app:layout_constraintTop_toTopOf="@id/map"
+                app:layout_constraintVertical_bias="0.89" />
+
+            <View
+                android:id="@+id/AFX0"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/map"
+                app:layout_constraintHorizontal_bias="0.40"
+                app:layout_constraintLeft_toLeftOf="@id/map"
+                app:layout_constraintRight_toRightOf="@id/map" />
+
+            <View
+                android:id="@+id/AFX1"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/map"
+                app:layout_constraintHorizontal_bias="0.656"
+                app:layout_constraintLeft_toLeftOf="@id/map"
+                app:layout_constraintRight_toRightOf="@id/map" />
+
+            <View
+                android:id="@+id/AUSX0"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/map"
+                app:layout_constraintHorizontal_bias="0.748"
+                app:layout_constraintLeft_toLeftOf="@id/map"
+                app:layout_constraintRight_toRightOf="@id/map" />
+
+            <View
+                android:id="@+id/AUSX1"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/map"
+                app:layout_constraintHorizontal_bias="0.985"
+                app:layout_constraintLeft_toLeftOf="@id/map"
+                app:layout_constraintRight_toRightOf="@id/map" />
+
+            <View
+                android:id="@+id/AUSY0"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/map"
+                app:layout_constraintRight_toRightOf="@id/map"
+                app:layout_constraintTop_toTopOf="@id/map"
+                app:layout_constraintVertical_bias="0.615" />
+
+            <View
+                android:id="@+id/AUSY1"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/map"
+                app:layout_constraintRight_toRightOf="@id/map"
+                app:layout_constraintTop_toTopOf="@id/map"
+                app:layout_constraintVertical_bias="0.95" />
+
+
+            <ImageView
+                android:id="@+id/LAView0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleX="1.1"
+                android:src="@drawable/lat_am_o"
+                android:translationZ="-1dp"
+                app:layout_constraintBottom_toBottomOf="@id/map"
+                app:layout_constraintLeft_toLeftOf="@id/LAX0"
+                app:layout_constraintRight_toRightOf="@id/LAX1"
+                app:layout_constraintTop_toTopOf="@id/LAY0"
+                app:tint="@color/gray_238" />
+
+            <ImageView
+                android:id="@+id/ASView0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/asia"
+                android:translationZ="-1dp"
+                app:layout_constraintBottom_toBottomOf="@id/ASY0"
+                app:layout_constraintLeft_toLeftOf="@id/ASX0"
+                app:layout_constraintRight_toRightOf="@id/map"
+                app:layout_constraintTop_toTopOf="@id/map"
+                app:tint="@color/gray_238" />
+
+            <ImageView
+                android:id="@+id/AFView0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/africa"
+                android:translationZ="-1dp"
+                app:layout_constraintBottom_toBottomOf="@id/AFY1"
+                app:layout_constraintLeft_toLeftOf="@id/AFX0"
+                app:layout_constraintRight_toRightOf="@id/AFX1"
+                app:layout_constraintTop_toTopOf="@id/AFY0"
+                app:tint="@color/gray_238" />
+
+            <ImageView
+                android:id="@+id/EUView0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/europa"
+                android:translationZ="-1dp"
+                app:layout_constraintBottom_toBottomOf="@id/EUY0"
+                app:layout_constraintLeft_toLeftOf="@id/EUX0"
+                app:layout_constraintRight_toRightOf="@id/EUX1"
+                app:layout_constraintTop_toTopOf="@id/map"
+                app:tint="@color/gray_238" />
+
+            <ImageView
+                android:id="@+id/NAView0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/north_america_0"
+                android:translationZ="-1dp"
+                app:layout_constraintBottom_toBottomOf="@id/NAY0"
+                app:layout_constraintLeft_toLeftOf="@id/map"
+                app:layout_constraintRight_toRightOf="@id/NAX0"
+                app:layout_constraintTop_toTopOf="@id/map"
+                app:tint="@color/gray_238" />
+
+            <ImageView
+                android:id="@+id/AUSView0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/australia"
+                android:translationZ="-1dp"
+                app:layout_constraintBottom_toBottomOf="@id/AUSY1"
+                app:layout_constraintLeft_toLeftOf="@id/AUSX0"
+                app:layout_constraintRight_toRightOf="@id/AUSX1"
+                app:layout_constraintTop_toTopOf="@id/AUSY0"
+                app:tint="@color/gray_238" />
+
+            <View
+                android:id="@+id/block"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/semiwhite_t"
+                app:layout_constraintBottom_toBottomOf="@id/map"
+                app:layout_constraintLeft_toLeftOf="@id/map"
+                app:layout_constraintRight_toRightOf="@id/map"
+                app:layout_constraintTop_toTopOf="@id/map" />
+
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/lock"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:elevation="1dp"
+                android:src="@drawable/locker_v2"
+                app:civ_border="false"
+                app:layout_constraintBottom_toBottomOf="@id/map"
+                app:layout_constraintLeft_toLeftOf="@id/map"
+                app:layout_constraintRight_toRightOf="@id/map"
+                app:layout_constraintTop_toTopOf="@id/map" />
+
+            <View
+                android:id="@+id/mapBack"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/red_gradient"
+                android:translationZ="-2dp"
+                app:layout_constraintBottom_toBottomOf="@id/map"
+                app:layout_constraintTop_toTopOf="@id/map" />
+
+            <HorizontalScrollView
+                android:id="@+id/hScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="23dp"
+                android:scrollbars="none"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/map">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/listRegions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipGuide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="1dp"
+                        android:visibility="gone"
+                        app:chipStrokeWidth="1.5dp" />
+                </com.google.android.material.chip.ChipGroup>
+
+            </HorizontalScrollView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

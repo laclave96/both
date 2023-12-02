@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/priceContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/base"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginStart="3dp"
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:gravity="end"
+            android:text="$4.99/"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/cantMonths"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/monthLabelGuide" />
+
+        <TextView
+            android:id="@+id/monthLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comforta_bold"
+            android:gravity="start"
+            android:text="mes"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/price"
+            app:layout_constraintLeft_toRightOf="@id/price" />
+
+        <TextView
+            android:id="@+id/monthLabelGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comforta_bold"
+            android:gravity="start"
+            android:text="mes"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="invisible"
+            app:layout_constraintBaseline_toBaselineOf="@id/price"
+            app:layout_constraintLeft_toRightOf="@id/price"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/cantMonths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comforta_bold"
+            android:text="3 meses"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:background="@drawable/gradient_button"
+            android:textColor="@color/white"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="3dp"
+            android:id="@+id/tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/comforta_bold"
+            android:text="Ahorra 34%"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cantMonths" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

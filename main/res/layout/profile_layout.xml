@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <com.genius.multiprogressbar.MultiProgressBar
+        android:id="@+id/stepBar"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="15dp"
+        android:translationZ="2dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/mainImage"
+        app:lineColor="@color/semigray_60"
+        app:progressSteps="4" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/comment"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="3dp"
+        android:translationZ="3dp"
+        app:layout_constraintBottom_toBottomOf="@id/cardName"
+        app:layout_constraintLeft_toRightOf="@id/liconPremium"
+        app:layout_constraintTop_toTopOf="@id/cardName"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/info" />
+
+
+    <LinearLayout
+        android:id="@+id/liconPremium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingTop="1dp"
+        android:translationZ="3dp"
+        app:layout_constraintBottom_toBottomOf="@id/cardName"
+        app:layout_constraintLeft_toRightOf="@id/cardName"
+        app:layout_constraintTop_toTopOf="@id/cardName">
+
+        <ImageView
+            android:id="@+id/iconPremium"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:src="@drawable/premium_check2"
+            android:visibility="gone"
+
+            />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/cardName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="3dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingTop="10dp"
+        android:singleLine="true"
+        android:text="Nombre, edad"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toTopOf="@id/cardCity"
+        app:layout_constraintLeft_toLeftOf="@id/mainImage" />
+
+    <TextView
+        android:id="@+id/cardCity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="112dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:singleLine="true"
+        android:text="Ciudad"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/mainImage"
+        app:layout_constraintLeft_toLeftOf="@id/mainImage"
+        app:layout_constraintRight_toRightOf="@id/mainImage"
+        app:layout_constraintVertical_bias="1" />
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/gradient_15dp_darker"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/mainImage"
+        app:layout_constraintLeft_toLeftOf="@id/mainImage"
+        app:layout_constraintRight_toRightOf="@id/mainImage"
+        app:layout_constraintTop_toTopOf="@id/cardName" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1" />
+
+
+    <View
+        android:id="@+id/leftButt"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginRight="40dp"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toTopOf="@id/view"
+        app:layout_constraintLeft_toLeftOf="@id/mainImage"
+        app:layout_constraintRight_toLeftOf="@id/rightButt"
+        app:layout_constraintTop_toTopOf="@id/mainImage" />
+
+    <View
+        android:id="@+id/rightButt"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="40dp"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toTopOf="@id/view"
+        app:layout_constraintLeft_toRightOf="@id/leftButt"
+        app:layout_constraintRight_toRightOf="@id/mainImage"
+        app:layout_constraintTop_toTopOf="@id/mainImage" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/mainImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        app:actualImageScaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderImage="@color/dBackground"
+        app:progressBarAutoRotateInterval="900"
+        app:progressBarImage="@drawable/ic_loading"
+        app:roundedCornerRadius="15dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

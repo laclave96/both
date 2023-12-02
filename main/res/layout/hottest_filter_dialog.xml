@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/comforta_bold"
+        android:text="Muéstrame"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/comforta_bold"
+        android:text="Aplicar"
+        android:textColor="@color/redSecundary"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/title"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <com.addisonelliott.segmentedbutton.SegmentedButtonGroup
+        android:id="@+id/buttonGroup"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/graySSSLite"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:position="2"
+        app:radius="30dp"
+        app:selectedBackground="@drawable/gradient_button"
+        app:selectedBorderColor="@color/graySSSLite"
+        app:selectedBorderWidth="2dp"
+        app:selectedButtonRadius="30dp"
+        app:selectionAnimationDuration="400">
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/comforta_bold"
+            android:paddingLeft="8dp"
+            android:paddingTop="6dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            android:textAlignment="center"
+            app:selectedTextColor="@color/white"
+            app:text="Mujeres"
+            app:textColor="@color/black"
+            app:textSize="16sp" />
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/comforta_bold"
+            android:paddingLeft="8dp"
+            android:paddingTop="6dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            android:textAlignment="center"
+            app:selectedTextColor="@color/white"
+            app:text="Hombres"
+            app:textColor="@color/black"
+            app:textSize="16sp" />
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/comforta_bold"
+            android:paddingLeft="8dp"
+            android:paddingTop="6dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            android:textAlignment="center"
+            app:selectedTextColor="@color/white"
+            app:text="Todos"
+            app:textColor="@color/black"
+            app:textSize="16sp" />
+
+    </com.addisonelliott.segmentedbutton.SegmentedButtonGroup>
+
+
+    <nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup
+        android:id="@+id/genderTags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="25dp"
+        app:flexWrap="wrap"
+        app:justifyContent="space_between"
+        app:layout_constraintTop_toBottomOf="@id/buttonGroup"
+        app:toggle_requiredAmount="1"
+        app:toggle_selectAnimation="circular_reveal">
+
+        <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+            android:id="@+id/tag1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            app:toggle_backgroundColor="@color/graySSSLite"
+            app:toggle_btnCornerRadius="30dp"
+            app:toggle_fontFamily="/fonts/comforta_bold.ttf"
+            app:toggle_paddingBottom="6dp"
+            app:toggle_paddingLeft="5dp"
+            app:toggle_paddingRight="5dp"
+            app:toggle_paddingTop="3dp"
+            app:toggle_selectedBackgroundColor="@color/redSecundaryButt"
+            app:toggle_selectedTextColor="@color/white"
+            app:toggle_text="24H"
+            app:toggle_textColor="@color/black"
+            app:toggle_textSize="16sp" />
+
+        <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+            android:id="@+id/tag2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            app:toggle_backgroundColor="@color/graySSSLite"
+            app:toggle_btnCornerRadius="30dp"
+            app:toggle_fontFamily="/fonts/comforta_bold.ttf"
+            app:toggle_paddingBottom="6dp"
+            app:toggle_paddingLeft="5dp"
+            app:toggle_paddingRight="5dp"
+            app:toggle_paddingTop="3dp"
+            app:toggle_selectedBackgroundColor="@color/redSecundaryButt"
+            app:toggle_selectedTextColor="@color/white"
+            app:toggle_text="1S"
+            app:toggle_textColor="@color/black"
+            app:toggle_textSize="16sp" />
+
+        <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+            android:id="@+id/tag3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            app:toggle_backgroundColor="@color/graySSSLite"
+            app:toggle_btnCornerRadius="30dp"
+            app:toggle_fontFamily="/fonts/comforta_bold.ttf"
+            app:toggle_paddingBottom="6dp"
+            app:toggle_paddingLeft="5dp"
+            app:toggle_paddingRight="5dp"
+            app:toggle_paddingTop="3dp"
+            app:toggle_selectedBackgroundColor="@color/redSecundaryButt"
+            app:toggle_selectedTextColor="@color/white"
+            app:toggle_text="1M"
+            app:toggle_textColor="@color/black"
+            app:toggle_textSize="16sp" />
+
+        <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+            android:id="@+id/tag4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            app:toggle_backgroundColor="@color/graySSSLite"
+            app:toggle_btnCornerRadius="30dp"
+            app:toggle_fontFamily="/fonts/comforta_bold.ttf"
+            app:toggle_paddingBottom="6dp"
+            app:toggle_paddingLeft="5dp"
+            app:toggle_paddingRight="5dp"
+            app:toggle_paddingTop="3dp"
+            app:toggle_selectedBackgroundColor="@color/redSecundaryButt"
+            app:toggle_selectedTextColor="@color/white"
+            app:toggle_text="1A"
+            app:toggle_textColor="@color/black"
+            app:toggle_textSize="16sp" />
+
+    </nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

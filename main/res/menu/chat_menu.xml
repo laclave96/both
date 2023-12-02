@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item
+
+        android:id="@+id/menuClean"
+        android:enabled="true"
+        android:title="Vaciar chat" />
+
+    <item
+        android:id="@+id/menuMute"
+        android:enabled="true"
+        android:title="Silenciar" />
+
+    <item
+        android:id="@+id/menuBlock"
+        android:enabled="true"
+        android:title="Bloquear" />
+
+
+</menu>

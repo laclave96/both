@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="112dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="6dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="6dp"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/back_15dp">
+
+
+    <TextView
+        android:id="@+id/cantMonths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/back_15dp"
+        android:backgroundTint="@color/graySLite"
+        android:fontFamily="@font/comforta_semibold"
+        android:text="222"
+        android:textColor="@color/graySLite"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:background="@drawable/back_15dp"
+        android:backgroundTint="@color/graySLite"
+        android:id="@+id/monthLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comforta_semibold"
+        android:text="Meseses"
+        android:textColor="@color/graySLite"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cantMonths" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/comforta_semibold"
+        android:text="109.999¥"
+        android:background="@drawable/back_15dp"
+        android:backgroundTint="@color/graySLite"
+        android:textColor="@color/graySLite"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/monthLabel" />
+
+    <TextView
+        android:id="@+id/mensual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comforta_bold"
+        android:text="al mes"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/back_15dp"
+        android:backgroundTint="@color/graySLite"
+        android:textColor="@color/graySLite"
+        android:textSize="11sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/price" />
+
+    <TextView
+        android:layout_marginBottom="17dp"
+        android:id="@+id/tag"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/gradient_button"
+        android:fontFamily="@font/comforta_semibold"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:paddingBottom="3dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mensual" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

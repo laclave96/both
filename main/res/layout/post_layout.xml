@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/profileImg"
+        android:layout_width="52dp"
+        android:layout_height="62dp"
+        android:paddingBottom="10dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="5dp"
+        android:translationZ="2dp"
+        app:civ_border="true"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="3dp"
+        app:layout_constraintLeft_toLeftOf="@id/mainImage"
+        app:layout_constraintTop_toTopOf="@id/mainImage"
+        app:placeholderImage="@color/dBackground"
+        app:progressBarAutoRotateInterval="900"
+        app:progressBarImage="@drawable/ic_loading_mini"
+        app:roundAsCircle="true"
+        app:roundingBorderColor="@color/redSecundary"
+        app:roundingBorderWidth="2dp" />
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/comforta_bold"
+        android:maxLength="25"
+        android:singleLine="true"
+        android:layout_marginBottom="13dp"
+        android:text="Mykel"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/profileImg"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toRightOf="@id/profileImg"
+        app:layout_constraintRight_toRightOf="@id/mainImage"
+        app:layout_constraintTop_toTopOf="@id/profileImg" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/comment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/comforta_bold"
+        android:lineSpacingMultiplier="1.15"
+        android:paddingTop="13dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:text="Conóceme y verás..."
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:autoLink="all"
+        android:textColorLink="@color/BlueG"
+        android:linksClickable="true"
+        android:textSize="17sp"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/mainImage"
+        app:layout_constraintLeft_toLeftOf="@id/mainImage"
+        app:layout_constraintRight_toRightOf="@id/mainImage" />
+
+
+    <View
+        app:layout_constraintTop_toTopOf="@id/comment"
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/gradient_view"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/mainImage"
+        app:layout_constraintLeft_toLeftOf="@id/mainImage"
+        app:layout_constraintRight_toRightOf="@id/mainImage" />
+
+    <View
+        app:layout_constraintTop_toTopOf="@id/mainImage"
+        android:id="@+id/topView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/gradient_15dp_top"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/profileImg"
+        app:layout_constraintLeft_toLeftOf="@id/mainImage"
+        app:layout_constraintRight_toRightOf="@id/mainImage" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/mainImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        app:actualImageScaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:progressBarAutoRotateInterval="900"
+        app:progressBarImage="@drawable/ic_loading"
+        app:roundedCornerRadius="15dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

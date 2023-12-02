@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layoutDescription="@xml/ask_layout_scene">
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/comforta_bold"
+        android:lineSpacingMultiplier="1.3"
+        android:text="¿Qué tipo de relación buscas?"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/image" />
+
+    <com.animsh.animatedcheckbox.AnimatedCheckBox
+        android:id="@+id/check1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        app:color_checked="@color/redSecundary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/question"
+        app:small_tick="true" />
+
+    <TextView
+        android:id="@+id/answ1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/comforta_bold"
+        android:paddingStart="35dp"
+        android:text="Una aventura."
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@id/check1"
+        app:layout_constraintLeft_toLeftOf="@id/check1"
+        app:layout_constraintTop_toTopOf="@id/check1" />
+
+    <com.animsh.animatedcheckbox.AnimatedCheckBox
+        android:id="@+id/check2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        app:color_checked="@color/redSecundary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/check1"
+        app:small_tick="true" />
+
+    <TextView
+        android:id="@+id/answ2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/comforta_bold"
+        android:paddingStart="35dp"
+        android:text="Algo serio."
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@id/check2"
+        app:layout_constraintLeft_toLeftOf="@id/check2"
+        app:layout_constraintTop_toTopOf="@id/check2" />
+
+    <com.animsh.animatedcheckbox.AnimatedCheckBox
+        android:id="@+id/check3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        app:color_checked="@color/redSecundary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/check2"
+        app:small_tick="true" />
+
+    <TextView
+        android:id="@+id/answ3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/comforta_bold"
+        android:paddingStart="35dp"
+        android:text="Lo que surja."
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@id/check3"
+        app:layout_constraintLeft_toLeftOf="@id/check3"
+        app:layout_constraintTop_toTopOf="@id/check3" />
+
+    <RelativeLayout
+        android:id="@+id/addAnsw"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:translationZ="-2dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/check3">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:padding="1dp"
+            android:src="@drawable/ic_round_add_24"
+            android:translationZ="1dp"
+            app:tint="@color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/back_circle"
+            android:backgroundTint="@color/graySALite" />
+    </RelativeLayout>
+
+
+    <EditText
+        android:maxLength="500"
+        android:id="@+id/editNewAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="3dp"
+        android:background="@color/transparent"
+        android:fontFamily="@font/comforta_bold"
+        android:hint="Añade tu respuesta aquí"
+        android:inputType="textCapSentences"
+        android:paddingStart="60dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="17sp"
+        android:translationZ="-1dp"
+        app:layout_constraintBottom_toBottomOf="@id/addAnsw"
+        app:layout_constraintLeft_toLeftOf="@id/addAnsw"
+        app:layout_constraintTop_toTopOf="@id/addAnsw" />
+</androidx.constraintlayout.widget.ConstraintLayout>

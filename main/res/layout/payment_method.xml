@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/comforta_bold"
+        android:text="Método de pago"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:padding="3dp"
+        android:src="@drawable/ic_round_close_24"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/grayDark" />
+
+
+    <ImageView
+        android:layout_width="31dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="6dp"
+        android:padding="1dp"
+        android:src="@drawable/google_logo"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/google"
+        app:layout_constraintLeft_toLeftOf="@id/google"
+        app:layout_constraintTop_toTopOf="@id/google" />
+
+
+    <TextView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/comforta_bold"
+        android:paddingStart="56dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="43dp"
+        android:singleLine="true"
+        android:text="Tarjeta de crédito - débito"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/google" />
+
+
+    <ImageView
+        android:layout_width="31dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="6dp"
+        android:src="@drawable/ic_card_outline_2"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/card"
+        app:layout_constraintLeft_toLeftOf="@id/card"
+        app:layout_constraintTop_toTopOf="@id/card" />
+
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_round_keyboard_arrow_right_24"
+        android:tint="@color/gray"
+        android:translationZ="1dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/google"
+        app:layout_constraintRight_toRightOf="@id/google"
+        app:layout_constraintTop_toTopOf="@id/google" />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_round_keyboard_arrow_right_24"
+        android:tint="@color/gray"
+        android:translationZ="1dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/card"
+        app:layout_constraintRight_toRightOf="@id/card"
+        app:layout_constraintTop_toTopOf="@id/card" />
+
+
+    <TextView
+        android:id="@+id/google"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/comforta_bold"
+        android:lines="1"
+        android:paddingStart="56dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="43dp"
+        android:text="Google Play"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="@id/card"
+        app:layout_constraintRight_toRightOf="@id/card"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/gray_238"
+        app:layout_constraintBottom_toTopOf="@id/card"
+        app:layout_constraintTop_toBottomOf="@id/google" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/gray_238"
+        app:layout_constraintTop_toBottomOf="@id/card" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="7dp"
+        android:background="@color/gray_238"
+        app:layout_constraintBottom_toTopOf="@id/google" />
+
+
+    <TextView
+        android:id="@+id/cardInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/gradient_button"
+        android:fontFamily="@font/quicksand_bold"
+        android:lines="1"
+        android:paddingStart="7dp"
+        android:paddingTop="1dp"
+        android:paddingEnd="7dp"
+        android:paddingBottom="4dp"
+        android:text="Save 7%"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/card"
+        app:layout_constraintLeft_toLeftOf="@id/card" />
+
+    <TextView
+        android:id="@+id/googleInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/face_back"
+        android:fontFamily="@font/quicksand_bold"
+        android:lines="1"
+        android:paddingStart="7dp"
+        android:paddingTop="1dp"
+        android:paddingEnd="7dp"
+        android:paddingBottom="4dp"
+        android:text="Pay easily"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/google"
+        app:layout_constraintLeft_toLeftOf="@id/google" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dBackground"
+    tools:context=".SettingsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/comforta_bold"
+            android:text="Editar"
+            android:textColor="@color/redSecundary"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/comforta_bold"
+            android:paddingBottom="2dp"
+            android:text="Ajustes"
+            android:textColor="@color/redSecundary"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@color/transparent"
+            android:padding="4dp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/redSecundary" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/ajustesBusqueda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/back_15dp"
+                android:backgroundTint="@color/cardview_light_background"
+                android:padding="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/filterIcon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ic_filter" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_toRightOf="@id/filterIcon"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/searchTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/editIcon"
+                        android:fontFamily="@font/comforta_bold"
+                        android:text="Filtros de búsqueda"
+                        android:textColor="@color/black"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleEdit"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/comforta_bold"
+                        android:text="Edad, distancia, sexo, regiones"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/notifications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/back_15dp"
+                android:backgroundTint="@color/cardview_light_background"
+                android:padding="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ajustesBusqueda">
+
+
+                <ImageView
+                    android:id="@+id/notifIcon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ic_notification" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_toRightOf="@id/notifIcon"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/notifTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/editIcon"
+                        android:fontFamily="@font/comforta_bold"
+                        android:text="Notificaciones"
+                        android:textColor="@color/black"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleEdit"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/comforta_bold"
+                        android:text="Configuración de las notificaciones"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/autoBill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/back_15dp"
+                android:backgroundTint="@color/cardview_light_background"
+                android:padding="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/notifications">
+
+
+                <ImageView
+                    android:id="@+id/billIcon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ic_payment" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_toRightOf="@id/billIcon"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/billTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/editIcon"
+                        android:fontFamily="@font/comforta_bold"
+                        android:text="Cuenta de pago"
+                        android:textColor="@color/black"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:lines="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/comforta_bold"
+                        android:singleLine="true"
+                        android:text="Configuración de la cuenta pago"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/faqs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/back_15dp"
+                android:backgroundTint="@color/cardview_light_background"
+                android:padding="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/autoBill">
+
+
+                <ImageView
+                    android:id="@+id/faqIcon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ic_faq" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_toRightOf="@id/faqIcon"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/faqTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/editIcon"
+                        android:fontFamily="@font/comforta_bold"
+                        android:text="Preguntas frecuentes"
+                        android:textColor="@color/black"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/comforta_bold"
+                        android:singleLine="true"
+                        android:text="Revise las dudas más frecuentes entre los usuarios"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/closeSession"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/back_15dp"
+                android:backgroundTint="@color/cardview_light_background"
+                android:padding="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/faqs">
+
+
+                <ImageView
+                    android:id="@+id/closeSIcon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ic_close_session" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_toRightOf="@id/closeSIcon"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/closeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/editIcon"
+                        android:fontFamily="@font/comforta_bold"
+                        android:text="Cerrar sesión"
+                        android:textColor="@color/black"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleEdit"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/comforta_bold"
+                        android:text="Cierra sesión en este dispositivo"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/deleteAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/back_15dp"
+                android:backgroundTint="@color/cardview_light_background"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/closeSession">
+
+
+                <ImageView
+                    android:id="@+id/deleteIcon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ic_delete_acc" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_toRightOf="@id/deleteIcon"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/deleteTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/editIcon"
+                        android:fontFamily="@font/comforta_bold"
+                        android:text="Borrar cuenta"
+                        android:textColor="@color/redSecundary"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleEdit"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/comforta_bold"
+                        android:text="Eliminar cuenta permanentemente"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
